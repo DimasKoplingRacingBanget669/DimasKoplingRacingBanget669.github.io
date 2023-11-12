@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ida Bagus Perawita Yasa - Downloads CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body id="body" class="bg-black text-white font-bold">
+  <button onclick="home()"
+    class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+    <svg class="h-6 w-6 fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M10 2L2 9h3v9h4v-6h4v6h4V9h3L10 2zM8 11v6h4v-4h4l-6-6-6 6h4z"></path>
+    </svg>
+    <span>Home</span>
+  </button>
+
+  </button>
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="text-center">
+      <h3 class="text-xl font-semibold">Applicant Information</h3>
+      <p class="mt-1 text-sm">Personal details and application.</p>
+    </div>
+    <div class="mt-6 border-t border-gray-100">
+      <dl class="divide-y divide-gray-100">
+        <div class="py-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium">Full name</dt>
+            <dd class="mt-1 text-sm">Ida Bagus Perawita Yasa</dd>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium">Application for</dt>
+            <dd class="mt-1 text-sm">Everyone</dd>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium">Email address</dt>
+            <dd class="mt-1 text-sm">prawitayasa@gmail.com</dd>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium">Salary expectation</dt>
+            <dd class="mt-1 text-sm">Free</dd>
+          </div>
+          <div class="sm:col-span-1">
+            <dt class="text-sm font-medium">View</dt>
+            <dd class="mt-1 text-sm" id="countView"></dd>
+          </div>
+          <div class="sm:col-span-3">
+            <dt class="text-sm font-medium">About</dt>
+            <dd class="mt-1 text-sm">
+              Cv ini dapat berubah seiring dengan pengalaman dan meningkatnya
+              pengetahuan saya di bidang ini, jika beminat anda dapat
+              mengunduh CV saya secara geratis melalui tombol Download di
+              bawah ini via Google Drive.
+            </dd>
+          </div>
+          <div class="sm:col-span-3">
+            <dt class="text-sm font-medium">Attachments</dt>
+            <dd class="mt-2 text-sm">
+              <ul role="list" class="divide-y divide-gray-100 rounded-md border border-gray-200">
+                <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm">
+                  <div class="flex items-center w-0 flex-1">
+                    <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <div class="ml-4 flex min-w-0 gap-2">
+                      <span class="truncate font-medium">Ida bagus Resume.pdf</span>
+                      <span class="text-gray-400">145 KB</span>
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <a id="Download" class="font-medium text-indigo-600 hover:text-indigo-500"></button>
+                      Download
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </div>
+      </dl>
+    </div>
+  </div>
+  <script src="./assets/JavaScript/download.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import { getDatabase, ref, onValue, update, runTransaction, set } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB8vxBkpO2QPDuAw0DBA0onOAU3ut_EjkA",
+      authDomain: "portofolio-f22d3.firebaseapp.com",
+      projectId: "portofolio-f22d3",
+      storageBucket: "portofolio-f22d3.appspot.com",
+      messagingSenderId: "327792003275",
+      appId: "1:327792003275:web:0380f72524056ca5d3b34e",
+      measurementId: "G-EZ6V6DLNM6",
+      databaseURL: "https://portofolio-f22d3-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    };
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Referensi ke Firebase Realtime Database
+      const viewCountRef = ref(database, 'viewCount');
+      const TEXT_view_count = document.getElementById("countView");
+
+      // Tingkatkan count setiap kali halaman dimuat
+      runTransaction(viewCountRef, (currentCount) => {
+        // Jika belum ada data, set ke 1, jika tidak, tambahkan 1
+        return (currentCount || 0) + 1;
+      })
+        .then(() => {
+          // Data disimpan dengan sukses!
+        })
+        .catch((error) => {
+          // Gagal menyimpan data...
+        });
+
+      // Pantau perubahan count dan perbarui tampilan
+      onValue(viewCountRef, (snapshot) => {
+        const count = snapshot.val();
+        TEXT_view_count.innerText = count;
+      });
+    });
+
+  </script>
+</body>
+
+</html>
