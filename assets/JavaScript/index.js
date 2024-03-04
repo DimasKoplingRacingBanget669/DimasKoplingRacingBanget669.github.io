@@ -29,12 +29,14 @@ var massageIng =
 var projectMassageIndo = [
   "Selamat datang dalam petualangan seru di mana pemain dapat menikmati mengatasi berbagai rintangan dengan menggunakan keterampilan unik mereka. Lewati semua rintangan yang muncul di depan Anda dan raihlah skor tertinggi untuk bersaing pencapaian Anda dalam permainan ini.",
   "Selamat Datang di TYI - TikTok, YouTube, Instagram Downloaders Sumber utama Anda untuk mengunduh video dari TikTok, YouTube, dan Instagram. Kami menyediakan alat yang mudah digunakan untuk mengonversi URL video favorit Anda menjadi file video yang dapat diunduh. Dengan TYI, Anda dapat menyimpan video yang Anda sukai tanpa batasan. Situs ini terus berkembang.",
-  "Website yang berfokus hanya untuk menganalisis sebuah market dan laba"
+  "Website yang berfokus hanya untuk menganalisis sebuah market dan laba",
+  "Website penyedia alat untuk memasukan data spp dan merekap spp"
 ];
 let projectTextEng = [
   "Welcome to an exciting adventure where players can enjoy overcoming various obstacles using their unique skills. Overcome all the obstacles that appear in front of you and achieve the highest score to compete with your achievements in this game.",
   "Welcome to TYI - TikTok, YouTube, Instagram Downloaders. Your main source to download videos from TikTok, YouTube, and Instagram. We provide an easy-to-use tool to convert your favorite video URLs into downloadable video files. With TYI, you can save the videos you like without limits. This site is constantly evolving.",
   "Websites that focus only on analyzing a market and profit",
+  "Website provider of tools to enter spp data and recap spp"
 ];
 
 var footerIndo = "Siap mengerjakan project anda hubungi saya melalui sosisal media di bawah berikut";
@@ -75,6 +77,6 @@ function toggleMobile() {
 }
 
 
-function downloadCV(){
+function downloadCV() {
   window.location.href = './download.html';
 }
